@@ -33,3 +33,68 @@ const double extraLargeFontSize = 30;
 const double largeFontSize = 24;
 const double meduimFontSize = 20;
 const double normalFontSize = 15;
+
+// List<Service> services = <Service>[
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.ac),
+//     onTap: () {
+//       // print("hello world");
+//     },
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.lights),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.water),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.bugs),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.cleans),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.saw),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.settingsLarge),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.cleans),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.saw),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.ac),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.lights),
+//     onTap: () {},
+//   ),
+//   Service(
+//     title: 'Carpenter',
+//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.water),
+//     onTap: () {},
+//   ),
+// ];
