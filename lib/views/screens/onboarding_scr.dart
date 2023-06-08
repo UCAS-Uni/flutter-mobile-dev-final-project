@@ -34,7 +34,7 @@ class OnboardingScr extends StatelessWidget {
         nextButton: OnBoardConsumer(
           builder: (context, ref, child) {
             final state = ref.watch(onBoardStateProvider);
-            return GradientButtonWid(
+            return HugeGradientBtnWid(
               text: state.isLastPage ? "DONE" : "NEXT",
               onTap: () => _onNextTap(state, context),
             );

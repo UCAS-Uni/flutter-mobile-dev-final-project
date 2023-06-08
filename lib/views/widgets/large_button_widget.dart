@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:homeservices/core/constants/constants.dart';
 
-import '../../core/constants/app_constants.dart';
-
-class HugeGradientBtnWid extends StatelessWidget {
+class LargeButton extends StatelessWidget {
   final String text;
   final Function() onTap;
-  const HugeGradientBtnWid(
-      {super.key, required this.text, required this.onTap});
+  const LargeButton({super.key, required this.text, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width - 70,
@@ -18,7 +16,7 @@ class HugeGradientBtnWid extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
-          gradient: secondaryGradient,
+          color: blackColor,
         ),
         child: Text(
           text,
