@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:homeservices/core/constants/constants.dart';
-import 'package:homeservices/views/screens/auth/customer/customer_login_screen.dart';
-import 'package:homeservices/views/screens/auth/provider/provider_login_screen.dart';
-import 'package:homeservices/views/widgets/app_logo_widget.dart';
+
+import '../../../core/constants/app_constants.dart';
+import '../../widgets/app_logo_widget.dart';
+import 'customer/customer_login_screen.dart';
+import 'provider/provider_login_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -40,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen>
         child: SafeArea(
           child: Column(
             children: [
-              const AppLogo(),
+              const AppLogoWid(),
               Expanded(
                 child: Container(
                   width: double.infinity,
