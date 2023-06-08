@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBarShape extends CustomClipper<Path> {
+class CustomAppBarShapeWid extends CustomClipper<Path> {
   @override
   getClip(Size size) {
     double height = size.height;

@@ -26,7 +26,6 @@ class AppRouter {
   }
 
   static void navigateFrom() {
-    print(navigatorKey.currentContext);
     Navigator.pop(navigatorKey.currentContext!);
   }
 }

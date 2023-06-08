@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:homeservices/core/constants/constants.dart';
-import 'package:homeservices/views/screens/home_scr.dart';
-import 'package:homeservices/views/widgets/large_gradient_button_widget.dart';
+
+import '../../core/constants/app_constants.dart';
+import '../widgets/huge_gradient_button_wid.dart';
+import 'home_scr.dart';
 
 class CardInfoFieldScr extends StatelessWidget {
   const CardInfoFieldScr({super.key});
@@ -79,7 +80,7 @@ class CardInfoFieldScr extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  LargeGradientButtonWidget(
+                  HugeGradientBtnWid(
                       text: "GO TO HOME",
                       onTap: () {
                         Navigator.pushReplacement(

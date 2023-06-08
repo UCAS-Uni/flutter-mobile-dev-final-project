@@ -33,6 +33,7 @@ const double extraLargeFontSize = 30;
 const double largeFontSize = 24;
 const double meduimFontSize = 20;
 const double normalFontSize = 15;
+const double smallFontSize = 12;
 
 // List<Service> services = <Service>[
 //   Service(

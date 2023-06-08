@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:homeservices/views/screens/cards/card_info_field_scr.dart';
-import 'package:homeservices/views/widgets/custom_gradient_appbar_widget.dart';
-import 'package:homeservices/views/widgets/custom_phone_texfield_widget.dart';
-import 'package:homeservices/views/widgets/custom_textfield_widget.dart';
-import 'package:homeservices/views/widgets/large_button_widget.dart';
+
+import '../widgets/custom_gradient_appbar_wid.dart';
+import '../widgets/custom_phone_field_wid.dart';
+import '../widgets/custom_textfield_wid.dart';
+import '../widgets/large_button_widget.dart';
+import 'card_info_field_scr.dart';
 
 class CardInfoScr extends StatelessWidget {
   CardInfoScr({super.key});
@@ -14,7 +15,7 @@ class CardInfoScr extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: const CustomGradientAppBar(
+      appBar: const CustomGradientAppBarWid(
         pageTtile: "Location",
       ),
       body: SizedBox(
@@ -25,15 +26,15 @@ class CardInfoScr extends StatelessWidget {
           children: [
             const Image(image: AssetImage("assets/images/map.png")),
             const SizedBox(height: 25),
-            CustomTextField(
+            CustomTextFieldWid(
               isLarge: true,
               controller: _detailsController,
               textHint: "More Details About Problem …",
             ),
             const SizedBox(height: 25),
-            CustomPhoneTextField(controller: _mobileController),
+            CustomPhoneFieldWid(controller: _mobileController),
             const Spacer(),
-            LargeButton(
+            LargeButtonWid(
                 text: "ADD ORDER",
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(

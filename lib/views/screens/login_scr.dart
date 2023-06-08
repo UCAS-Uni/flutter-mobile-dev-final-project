@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/app_constants.dart';
-import '../../widgets/app_logo_wid.dart';
+import '../../core/constants/app_constants.dart';
+import '../widgets/app_logo_wid.dart';
 import 'customer_signin_scr.dart';
 import 'provider_singin_scr.dart';
 

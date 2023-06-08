@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_constants.dart';
-import '../../../widgets/custom_phone_field_wid.dart';
-import '../../../widgets/custom_textfield_wid.dart';
-import '../../../widgets/gradient_button_wid.dart';
+import '../../core/constants/app_constants.dart';
+import '../widgets/custom_phone_field_wid.dart';
+import '../widgets/custom_textfield_wid.dart';
+import '../widgets/gradient_button_wid.dart';
 
 class ProviderSingupScr extends StatefulWidget {
   final TextEditingController mobileController;

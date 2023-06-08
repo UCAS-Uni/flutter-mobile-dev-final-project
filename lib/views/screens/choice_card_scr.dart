@@ -1,10 +1,11 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:homeservices/core/constants/constants.dart';
-import 'package:homeservices/views/screens/cards/card_info_scr.dart';
-import 'package:homeservices/views/widgets/custom_gradient_appbar_widget.dart';
-import 'package:homeservices/views/widgets/custom_textfield_widget.dart';
-import 'package:homeservices/views/widgets/large_button_widget.dart';
+
+import '../../core/constants/app_constants.dart';
+import '../widgets/custom_gradient_appbar_wid.dart';
+import '../widgets/custom_textfield_wid.dart';
+import '../widgets/large_button_widget.dart';
+import 'card_info_scr.dart';
 
 class ChoiceCardScreen extends StatelessWidget {
   ChoiceCardScreen({super.key});
@@ -13,7 +14,7 @@ class ChoiceCardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomGradientAppBar(
+      appBar: const CustomGradientAppBarWid(
         pageTtile: "Card Title",
       ),
       body: SizedBox(
@@ -64,13 +65,13 @@ class ChoiceCardScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 40),
-            CustomTextField(
+            CustomTextFieldWid(
               isLarge: true,
               controller: _controller,
               textHint: "More Details About Problem …",
             ),
             const Spacer(),
-            LargeButton(
+            LargeButtonWid(
                 text: "NEXT",
                 onTap: () {
                   Navigator.of(context).push(

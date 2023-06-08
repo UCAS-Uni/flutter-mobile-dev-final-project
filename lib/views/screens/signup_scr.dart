@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_dev_final_project/views/screens/authn/provider_singup_scr.dart';
+import 'package:flutter_mobile_dev_final_project/views/screens/provider_singup_scr.dart';
 
-import '../../../core/constants/app_constants.dart';
-import '../../widgets/custom_back_button_wid.dart';
+import '../../core/constants/app_constants.dart';
+import '../widgets/custom_back_button_wid.dart';
 import 'customer_signup_scr.dart';
 
 class SignUpScr extends StatefulWidget {

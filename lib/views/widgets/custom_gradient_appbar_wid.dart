@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:homeservices/core/constants/constants.dart';
-import 'package:homeservices/views/widgets/custom_appbar_shape_widget.dart';
-import 'package:homeservices/views/widgets/custom_back_button_widget.dart';
 
-class CustomGradientAppBar extends StatelessWidget
+import '../../core/constants/app_constants.dart';
+import 'custom_appbar_shape_widget.dart';
+import 'custom_back_button_wid.dart';
+
+class CustomGradientAppBarWid extends StatelessWidget
     implements PreferredSizeWidget {
   final String pageTtile;
   final bool isBackButton;
-  const CustomGradientAppBar({
+  const CustomGradientAppBarWid({
     super.key,
     required this.pageTtile,
     this.isBackButton = true,
@@ -22,7 +23,7 @@ class CustomGradientAppBar extends StatelessWidget
       leading: const Icon(null),
       toolbarHeight: 110,
       flexibleSpace: ClipPath(
-        clipper: CustomAppBarShape(),
+        clipper: CustomAppBarShapeWid(),
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: 150,
@@ -35,7 +36,7 @@ class CustomGradientAppBar extends StatelessWidget
                 : MainAxisAlignment.center,
             children: isBackButton
                 ? [
-                    const CustomBackButton(),
+                    const CustomBackBtnWid(),
                     Text(
                       pageTtile,
                       style: const TextStyle(

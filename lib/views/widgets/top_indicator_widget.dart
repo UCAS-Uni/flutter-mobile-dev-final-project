@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:homeservices/core/constants/constants.dart';
+
+import '../../core/constants/app_constants.dart';
 
 class TopIndicator extends Decoration {
   @override

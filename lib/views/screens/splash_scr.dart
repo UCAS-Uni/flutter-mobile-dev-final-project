@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../../core/navigations/app_navigator.dart';
+import 'onboarding_scr.dart';
 
 class SplashScr extends StatefulWidget {
   const SplashScr({super.key});
@@ -14,7 +15,7 @@ class _SplashScrState extends State<SplashScr> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 3), () {
-      // AppRouter.navigateWithReplacementToWidget(OnboardingScr());
+      AppRouter.navigateWithReplacementToWidget(OnboardingScr());
     });
   }
 

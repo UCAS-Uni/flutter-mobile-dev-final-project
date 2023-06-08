@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:homeservices/core/constants/constants.dart';
 
-class LargeButton extends StatelessWidget {
+import '../../core/constants/app_constants.dart';
+
+class LargeButtonWid extends StatelessWidget {
   final String text;
   final Function() onTap;
-  const LargeButton({super.key, required this.text, required this.onTap});
+  const LargeButtonWid({super.key, required this.text, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
