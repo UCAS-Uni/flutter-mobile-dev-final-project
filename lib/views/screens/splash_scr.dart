@@ -14,6 +14,7 @@ class SplashScr extends StatefulWidget {
 class _SplashScrState extends State<SplashScr> {
   @override
   void initState() {
+    super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       AppRouter.navigateWithReplacementToWidget(OnboardingScr());
     });
