@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
 
-class OptionCard extends StatelessWidget {
+class OptionCardWid extends StatelessWidget {
   final bool haveContent;
   final Map<String, dynamic> map;
-  const OptionCard({
+  const OptionCardWid({
     super.key,
     required this.map,
     this.haveContent = false,

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
 
-class OrderCardDetails extends StatelessWidget {
+class OrderCardDetailsWid extends StatelessWidget {
   final String title;
   final String date;
   final String serviceType;
-  const OrderCardDetails({
+  const OrderCardDetailsWid({
     super.key,
     required this.title,
     required this.date,

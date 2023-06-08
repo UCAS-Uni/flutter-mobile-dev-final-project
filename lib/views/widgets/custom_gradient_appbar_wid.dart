@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
-import 'custom_appbar_shape_widget.dart';
+import 'custom_appbar_shape_wid.dart';
 import 'custom_back_button_wid.dart';
 
 class CustomGradientAppBarWid extends StatelessWidget
