@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../views/widgets/custom_icons_widget.dart';
+import '../../views/widgets/service_card_wid.dart';
+
 // COLORS
 const primaryColor = Color(0xff346EDF);
 const secondaryColor = Color(0xff6FC8FB);
@@ -35,67 +38,67 @@ const double meduimFontSize = 20;
 const double normalFontSize = 15;
 const double smallFontSize = 12;
 
-// List<Service> services = <Service>[
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.ac),
-//     onTap: () {
-//       // print("hello world");
-//     },
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.lights),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.water),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.bugs),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.cleans),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.saw),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.settingsLarge),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.cleans),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.saw),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.ac),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.lights),
-//     onTap: () {},
-//   ),
-//   Service(
-//     title: 'Carpenter',
-//     icon: const CustomIcons(height: 50, icon: CustomAppIcons.water),
-//     onTap: () {},
-//   ),
-// ];
+List<ServiceWid> services = <ServiceWid>[
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.ac),
+    onTap: () {
+      // print("hello world");
+    },
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.lights),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.water),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.bugs),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.cleans),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.saw),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.settingsLarge),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.cleans),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.saw),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.ac),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.lights),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIcons(height: 50, icon: CustomAppIcons.water),
+    onTap: () {},
+  ),
+];

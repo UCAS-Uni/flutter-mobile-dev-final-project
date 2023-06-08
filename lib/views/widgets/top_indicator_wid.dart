@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
 
-class TopIndicator extends Decoration {
+class TopIndicatorWid extends Decoration {
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
     return _TopIndicatorBox();

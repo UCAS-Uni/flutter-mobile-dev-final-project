@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/constants/app_constants.dart';
 import '../widgets/app_logo_wid.dart';
 import '../widgets/custom_icons_widget.dart';
-import '../widgets/top_indicator_widget.dart';
+import '../widgets/top_indicator_wid.dart';
 
 class HomeScr extends StatefulWidget {
   const HomeScr({super.key});
@@ -34,7 +34,7 @@ class _HomeScrState extends State<HomeScr> with TickerProviderStateMixin {
           labelColor: whiteColor,
           labelStyle: const TextStyle(fontSize: smallFontSize),
           controller: _tabController,
-          indicator: TopIndicator(),
+          indicator: TopIndicatorWid(),
           indicatorSize: TabBarIndicatorSize.tab,
           tabs: const [
             Tab(icon: AppLogoWid(isIcon: true), text: 'Service'),
