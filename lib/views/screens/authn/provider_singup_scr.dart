@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_dev_final_project/core/navigations/app_navigator.dart';
 
 import '../../../../core/constants/app_constants.dart';
 import '../../../widgets/custom_phone_field_wid.dart';
 import '../../../widgets/custom_textfield_wid.dart';
 import '../../../widgets/gradient_button_wid.dart';
 
-class ProviderLoginScreen extends StatefulWidget {
+class ProviderSingupScr extends StatefulWidget {
   final TextEditingController mobileController;
   final TextEditingController passwordController;
-  const ProviderLoginScreen({
+  final TextEditingController nameController;
+  final TextEditingController emailController;
+  const ProviderSingupScr({
     super.key,
     required this.mobileController,
     required this.passwordController,
+    required this.nameController,
+    required this.emailController,
   });
 
   @override
-  State<ProviderLoginScreen> createState() => _ProviderLoginScreenState();
+  State<ProviderSingupScr> createState() => _ProviderSingupScrState();
 }
 
-class _ProviderLoginScreenState extends State<ProviderLoginScreen> {
+class _ProviderSingupScrState extends State<ProviderSingupScr> {
   bool _isRememberChecked = false;
   @override
   Widget build(BuildContext context) {
@@ -28,9 +31,19 @@ class _ProviderLoginScreenState extends State<ProviderLoginScreen> {
       height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
-          const SizedBox(height: 50),
+          const SizedBox(height: 35),
+          CustomTextFieldWid(
+            textHint: 'Full Name',
+            controller: widget.nameController,
+          ),
+          const SizedBox(height: 10),
+          CustomTextFieldWid(
+            textHint: 'Email',
+            controller: widget.emailController,
+          ),
+          const SizedBox(height: 10),
           CustomPhoneFieldWid(controller: widget.mobileController),
-          const SizedBox(height: 30),
+          const SizedBox(height: 10),
           CustomTextFieldWid(
             textHint: 'Password',
             controller: widget.passwordController,
@@ -39,29 +52,31 @@ class _ProviderLoginScreenState extends State<ProviderLoginScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  // mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Checkbox(
-                      shape: const CircleBorder(),
-                      activeColor: primaryColor,
-                      value: _isRememberChecked,
-                      onChanged: (value) {
-                        setState(() {
-                          _isRememberChecked = value!;
-                        });
-                      },
-                    ),
-                    const Text(
-                      "Remember me",
-                      style: TextStyle(fontSize: smallFontSize),
-                    ),
-                  ],
+                Checkbox(
+                  shape: const CircleBorder(),
+                  activeColor: primaryColor,
+                  value: _isRememberChecked,
+                  onChanged: (value) {
+                    setState(() {
+                      _isRememberChecked = value!;
+                    });
+                  },
                 ),
-                TextButton(
-                    onPressed: () {}, child: const Text("forgot password ?")),
+                const Text(
+                  "I Read and Accept Home Service",
+                  style: TextStyle(fontSize: 10),
+                ),
+                GestureDetector(
+                    onTap: () {},
+                    child: const Text(
+                      "  Terms & Conditions",
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: primaryColor,
+                      ),
+                    )),
               ],
             ),
           ),
@@ -76,15 +91,13 @@ class _ProviderLoginScreenState extends State<ProviderLoginScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const Text(
-                      "New Member?",
+                      "Have Account?",
                       style: TextStyle(fontSize: normalFontSize),
                     ),
                     GestureDetector(
-                      onTap: () {
-                        //AppRouter.navigateToWidget(const SignUpScreen(selectedPage: 0,));
-                      },
+                      onTap: () => Navigator.of(context).pop(),
                       child: const Text(
-                        "SIGN UP",
+                        "SIGN IN",
                         style: TextStyle(
                           fontSize: normalFontSize,
                           color: primaryColor,
@@ -93,34 +106,13 @@ class _ProviderLoginScreenState extends State<ProviderLoginScreen> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
-                HugeGradientButtonWid(
-                    text: "LOGIN",
-                    onTap: () {
-                      // AppRouter.navigateWithReplacementToWidget(const HomeScr());
-                    }),
+                HugeGradientButtonWid(text: "SIGN UP", onTap: () {}),
               ],
             ),
           ),
-          const Spacer(),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Get Start Now",
-                style: TextStyle(
-                  fontSize: normalFontSize,
-                  color: blackColor,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(width: 7),
-              Icon(Icons.arrow_forward)
-            ],
-          ),
-          const SizedBox(height: 30),
         ],
       ),
     );

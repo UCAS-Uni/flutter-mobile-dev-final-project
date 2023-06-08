@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_constants.dart';
-import '../../../widgets/custom_phone_field_wid.dart';
-import '../../../widgets/custom_textfield_wid.dart';
-import '../../../widgets/gradient_button_wid.dart';
+import '../../../core/constants/app_constants.dart';
+import '../../widgets/custom_phone_field_wid.dart';
+import '../../widgets/custom_textfield_wid.dart';
+import '../../widgets/gradient_button_wid.dart';
 
-class CustomerSignUpScreen extends StatefulWidget {
+class CustomerSignupScr extends StatefulWidget {
   final TextEditingController mobileController;
   final TextEditingController passwordController;
   final TextEditingController nameController;
   final TextEditingController emailController;
-  const CustomerSignUpScreen({
+  const CustomerSignupScr({
     super.key,
     required this.mobileController,
     required this.passwordController,
@@ -19,10 +19,10 @@ class CustomerSignUpScreen extends StatefulWidget {
   });
 
   @override
-  State<CustomerSignUpScreen> createState() => _CustomerSignUpScreenState();
+  State<CustomerSignupScr> createState() => _CustomerSignupScrState();
 }
 
-class _CustomerSignUpScreenState extends State<CustomerSignUpScreen> {
+class _CustomerSignupScrState extends State<CustomerSignupScr> {
   bool _isRememberChecked = false;
   @override
   Widget build(BuildContext context) {

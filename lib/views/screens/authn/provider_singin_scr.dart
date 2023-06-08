@@ -1,25 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobile_dev_final_project/core/navigations/app_navigator.dart';
 
 import '../../../../core/constants/app_constants.dart';
-import '../../../../core/navigations/app_navigator.dart';
 import '../../../widgets/custom_phone_field_wid.dart';
 import '../../../widgets/custom_textfield_wid.dart';
 import '../../../widgets/gradient_button_wid.dart';
+import '../../home_scr.dart';
+import '../signup_scr.dart';
 
-class CustomerLoginScreen extends StatefulWidget {
+class ProviderSigninScr extends StatefulWidget {
   final TextEditingController mobileController;
   final TextEditingController passwordController;
-  const CustomerLoginScreen({
+  const ProviderSigninScr({
     super.key,
     required this.mobileController,
     required this.passwordController,
   });
 
   @override
-  State<CustomerLoginScreen> createState() => _CustomerLoginScreenState();
+  State<ProviderSigninScr> createState() => _ProviderSigninScrState();
 }
 
-class _CustomerLoginScreenState extends State<CustomerLoginScreen> {
+class _ProviderSigninScrState extends State<ProviderSigninScr> {
   bool _isRememberChecked = false;
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,6 @@ class _CustomerLoginScreenState extends State<CustomerLoginScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  // mainAxisSize: MainAxisSize.min,
                   children: [
                     Checkbox(
                       shape: const CircleBorder(),
@@ -81,11 +82,9 @@ class _CustomerLoginScreenState extends State<CustomerLoginScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        // AppRouter.navigateToWidget(
-                        // const SignUpScreen(
-                        //     selectedPage: 1,
-                        //   ),
-                        // );
+                        AppRouter.navigateToWidget(const SignUpScr(
+                          selectedPage: 0,
+                        ));
                       },
                       child: const Text(
                         "SIGN UP",
@@ -100,7 +99,12 @@ class _CustomerLoginScreenState extends State<CustomerLoginScreen> {
                     )
                   ],
                 ),
-                HugeGradientButtonWid(text: "LOGIN", onTap: () {}),
+                HugeGradientButtonWid(
+                    text: "LOGIN",
+                    onTap: () {
+                      AppRouter.navigateWithReplacementToWidget(
+                          const HomeScr());
+                    }),
               ],
             ),
           ),

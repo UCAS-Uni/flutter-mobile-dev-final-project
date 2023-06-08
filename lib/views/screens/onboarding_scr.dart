@@ -3,7 +3,8 @@ import 'package:flutter_onboard/flutter_onboard.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../../core/navigations/app_navigator.dart';
-import '../widgets/gradient_button_wid.dart';
+import '../widgets/huge_gradient_button_wid.dart';
+import 'authn/login_scr.dart';
 
 class OnboardingScr extends StatelessWidget {
   final PageController _pageController = PageController();
@@ -14,10 +15,10 @@ class OnboardingScr extends StatelessWidget {
       body: OnBoard(
         pageController: _pageController,
         onSkip: () {
-          // AppRouter.navigateWithReplacementToWidget(LoginScreen());
+          AppRouter.navigateWithReplacementToWidget(const LoginScr());
         },
         onDone: () {
-          // AppRouter.navigateWithReplacementToWidget(LoginScreen());
+          AppRouter.navigateWithReplacementToWidget(const LoginScr());
         },
         onBoardData: onBoardData,
         titleStyles: const TextStyle(
@@ -51,7 +52,7 @@ class OnboardingScr extends StatelessWidget {
         curve: Curves.easeInOutSine,
       );
     } else {
-      //  AppRouter.navigateWithReplacementToWidget(LoginScreen());
+      AppRouter.navigateWithReplacementToWidget(LoginScr());
     }
   }
 }

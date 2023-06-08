@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_dev_final_project/views/screens/authn/provider/provider_signup_screen.dart';
+import 'package:flutter_mobile_dev_final_project/views/screens/authn/provider_singup_scr.dart';
 
 import '../../../core/constants/app_constants.dart';
-import '../../widgets/custom_back_button_widget.dart';
-import 'customer/customer_signup_screen.dart';
+import '../../widgets/custom_back_button_wid.dart';
+import 'customer_signup_scr.dart';
 
-class SignUpScreen extends StatefulWidget {
+class SignUpScr extends StatefulWidget {
   final int selectedPage;
-  const SignUpScreen({super.key, required this.selectedPage});
+  const SignUpScr({super.key, required this.selectedPage});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignUpScr> createState() => _SignUpScrState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen>
-    with TickerProviderStateMixin {
+class _SignUpScrState extends State<SignUpScr> with TickerProviderStateMixin {
   late final TabController _tabController;
   final TextEditingController _mobileNumberController = TextEditingController();
   final TextEditingController _providerPasswordController =
@@ -79,13 +78,13 @@ class _SignUpScreenState extends State<SignUpScreen>
                           child: TabBarView(
                             controller: _tabController,
                             children: [
-                              ProviderSignUpScreen(
+                              ProviderSingupScr(
                                 nameController: _nameController,
                                 emailController: _emailController,
                                 mobileController: _mobileNumberController,
                                 passwordController: _providerPasswordController,
                               ),
-                              CustomerSignUpScreen(
+                              CustomerSignupScr(
                                 nameController: _nameController,
                                 emailController: _emailController,
                                 mobileController: _mobileNumberController,

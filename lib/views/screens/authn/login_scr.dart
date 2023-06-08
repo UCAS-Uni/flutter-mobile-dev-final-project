@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/app_constants.dart';
-import '../../widgets/app_logo_widget.dart';
-import 'customer/customer_login_screen.dart';
-import 'provider/provider_login_screen.dart';
+import '../../widgets/app_logo_wid.dart';
+import 'customer_signin_scr.dart';
+import 'provider_singin_scr.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScr extends StatefulWidget {
+  const LoginScr({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<LoginScr> createState() => _LoginScrState();
 }
 
-class _LoginScreenState extends State<LoginScreen>
-    with TickerProviderStateMixin {
+class _LoginScrState extends State<LoginScr> with TickerProviderStateMixin {
   late final TabController _tabController;
   final TextEditingController _mobileNumberController = TextEditingController();
   final TextEditingController _customerNumberController =
@@ -68,11 +67,11 @@ class _LoginScreenState extends State<LoginScreen>
                         child: TabBarView(
                           controller: _tabController,
                           children: [
-                            ProviderLoginScreen(
+                            ProviderSigninScr(
                               mobileController: _mobileNumberController,
                               passwordController: _providerPasswordController,
                             ),
-                            CustomerLoginScreen(
+                            CustomerSinginScr(
                               mobileController: _mobileNumberController,
                               passwordController: _customerNumberController,
                             ),
