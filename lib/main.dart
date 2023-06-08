@@ -6,7 +6,7 @@ import 'views/screens/main_scr.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await SharedPref.instance.init();
   DioManagerClass.getInstance.init();
+  await SharedPref.instance.init();
   runApp(MainScr());
 }

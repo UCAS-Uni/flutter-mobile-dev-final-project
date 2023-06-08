@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobile_dev_final_project/models/entities/app_response.dart';
+import 'package:flutter_mobile_dev_final_project/views/screens/home_scr.dart';
 
 import '../../core/navigations/app_navigator.dart';
 import '../../models/entities/user_models.dart';
@@ -62,15 +63,7 @@ class AuthProvider extends ChangeNotifier {
         },
       );
     }
-    // await StoreHelper.storeHelper.addUserToFireStore(newUser);
   }
-
-  // checkUser() async {
-  //   var user = AuthHelper.instance.checkUser();
-  //   user == null
-  //       ? AppRouter.navigateWithReplacementToWidget(const CategoriesScreen())
-  //       : AppRouter.navigateWithReplacementToWidget(const SignInScreen());
-  // }
 
   signIn() async {
     print("Provider email: ${singinProviderEmailController.text}");
@@ -88,14 +81,11 @@ class AuthProvider extends ChangeNotifier {
             : singinProviderPasswordController.text,
       },
     );
-    if (credential != null) {
-      // AppRouter.navigateWithReplacementToWidget(CategoriesScreen());
-      // navigate to home screen
-      isSignedIn = true;
-      notifyListeners();
-    } else {
-      // Show alert dialog with error message
 
+    if (credential.data != null) {
+      AppRouter.navigateWithReplacementToWidget(HomeScr());
+      // notifyListeners();
+    } else {
       showDialog(
         context: AppRouter.navigatorKey.currentContext!,
         builder: (context) {

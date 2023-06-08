@@ -16,11 +16,10 @@ class AuthHelper {
     var appResponse = await AuthApi.getInstance
         .loginRequest(body: body, url: singinEndpoint, header: {
       'Accept': '*/*',
-      'Content-Type': 'application/json',
-      // 'Connection': 'keep-alive',
-      // 'Accept-Encoding': 'gzip, deflate, br',
+      'Content-Type':
+          'multipart/form-data; boundary=<calculated when request is sent>',
     });
-    print("Khader!!");
+
     if (appResponse.code?.success == true) {
       print("Debug 1");
       SharedPref.instance

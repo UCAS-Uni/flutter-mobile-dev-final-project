@@ -10,11 +10,11 @@ class AppResponse {
     try {
       if (map["data"] == null) {
         return AppResponse(
-          code: Status.fromJson(map["code"]),
+          code: Status.fromJson(map),
         );
       } else {
         return AppResponse(
-          code: Status.fromJson(map["code"]),
+          code: Status.fromJson(map),
           data: map["data"],
         );
       }
@@ -33,8 +33,6 @@ class AppResponse {
       return {
         "status": code?.toJson(),
         "data": data,
-        "success": success,
-        "message": message,
       };
     } catch (e) {
       Logger().e(e);

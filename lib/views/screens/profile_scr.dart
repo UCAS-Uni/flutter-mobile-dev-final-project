@@ -54,7 +54,7 @@ class ProfileScr extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25),
                       image: const DecorationImage(
                         image: NetworkImage(
-                            'https://avatars.githubusercontent.com/u/58864791'),
+                            'https://avatars.githubusercontent.com/u/62449032?v=4'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -68,14 +68,14 @@ class ProfileScr extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          'Abdelrahman',
+                          'Khader Karaja',
                           style: TextStyle(
                               color: blackColor,
                               fontSize: largeFontSize,
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
-                          'Khanunis, Palestine',
+                          'Gaza, Palestine',
                           style: TextStyle(
                             color: lightGreyColor,
                             fontSize: normalFontSize,

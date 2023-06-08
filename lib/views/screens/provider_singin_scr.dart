@@ -111,11 +111,6 @@ class _ProviderSigninScrState extends State<ProviderSigninScr> {
                         text: "LOGIN",
                         onTap: () {
                           provider.signIn();
-                          // TODO: Navigate to home screen
-                          if (provider.isSignedIn) {
-                            AppRouter.navigateWithReplacementToWidget(
-                                const HomeScr());
-                          }
                         }),
                   ],
                 ),

@@ -21,8 +21,6 @@ class SharedPref {
   final String userTypeKey = "userTypeKey";
   final String userTokenKey = "tokenKey";
   final String userDataKey = "userDataKey";
-  final String fcmKey = "fcmKey";
-  final String accountStatus = "stausKet";
 
   void setUserLoginState({required String value}) {
     _prefs?.setString(loginStateKey, value);
@@ -38,10 +36,6 @@ class SharedPref {
 
   void setUserType({required String userType}) {
     _prefs?.setString(userTypeKey, userType);
-  }
-
-  void setAccountStatus({required String status}) {
-    _prefs?.setString(accountStatus, status);
   }
 
   void setUserToken({required String token}) {

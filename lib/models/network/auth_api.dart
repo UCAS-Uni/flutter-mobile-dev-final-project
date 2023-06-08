@@ -14,6 +14,7 @@ class AuthApi {
     try {
       var response = await DioManagerClass.getInstance
           .dioPostFormMethod(url: url, body: body, header: header);
+      print("dio_msg_response : ${response.toString()}");
       return AppResponse.fromJson(json.decode(response.toString()));
     } on DioException catch (ex) {
       var message = json.decode(ex.response.toString());
