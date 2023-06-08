@@ -23,7 +23,7 @@ class OnboardingScr extends StatelessWidget {
         onBoardData: onBoardData,
         titleStyles: const TextStyle(
           color: primaryColor,
-          fontSize: meduimFontSize,
+          fontSize: mediumFontSize,
           fontWeight: FontWeight.w600,
         ),
         pageIndicatorStyle: const PageIndicatorStyle(

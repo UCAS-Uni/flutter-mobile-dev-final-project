@@ -5,8 +5,8 @@ import '../../core/navigations/app_navigator.dart';
 import '../../core/themes/app_theme.dart';
 import 'splash_scr.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MainScr extends StatelessWidget {
+  const MainScr({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

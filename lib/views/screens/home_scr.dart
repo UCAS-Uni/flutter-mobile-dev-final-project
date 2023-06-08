@@ -39,19 +39,19 @@ class _HomeScrState extends State<HomeScr> with TickerProviderStateMixin {
           tabs: const [
             Tab(icon: AppLogoWid(isIcon: true), text: 'Service'),
             Tab(
-                icon: CustomIcons(
+                icon: CustomIconWid(
                   height: 30,
                   icon: CustomAppIcons.orders,
                 ),
                 text: 'Orders'),
             Tab(
-                icon: CustomIcons(
+                icon: CustomIconWid(
                   height: 30,
                   icon: CustomAppIcons.account,
                 ),
                 text: 'Account'),
             Tab(
-                icon: CustomIcons(
+                icon: CustomIconWid(
                   height: 30,
                   icon: CustomAppIcons.more,
                 ),

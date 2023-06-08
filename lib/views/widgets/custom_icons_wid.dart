@@ -16,11 +16,11 @@ enum CustomAppIcons {
   water
 }
 
-class CustomIcons extends StatelessWidget {
+class CustomIconWid extends StatelessWidget {
   // final double width;
   final double height;
   final CustomAppIcons icon;
-  const CustomIcons({
+  const CustomIconWid({
     super.key,
     // required this.width,
     required this.height,

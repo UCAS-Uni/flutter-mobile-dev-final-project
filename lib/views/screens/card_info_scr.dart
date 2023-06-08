@@ -16,7 +16,7 @@ class CardInfoScr extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: const CustomGradientAppBarWid(
-        pageTtile: "Location",
+        pageTitle: "Location",
       ),
       body: SizedBox(
         width: double.infinity,

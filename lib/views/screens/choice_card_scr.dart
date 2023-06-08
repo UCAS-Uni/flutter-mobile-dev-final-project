@@ -7,15 +7,15 @@ import '../widgets/custom_textfield_wid.dart';
 import '../widgets/large_button_widget.dart';
 import 'card_info_scr.dart';
 
-class ChoiceCardScreen extends StatelessWidget {
-  ChoiceCardScreen({super.key});
+class ChoiceCardScr extends StatelessWidget {
+  ChoiceCardScr({super.key});
   final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomGradientAppBarWid(
-        pageTtile: "Card Title",
+        pageTitle: "Card Title",
       ),
       body: SizedBox(
         width: double.infinity,

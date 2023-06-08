@@ -6,11 +6,11 @@ import 'custom_back_button_wid.dart';
 
 class CustomGradientAppBarWid extends StatelessWidget
     implements PreferredSizeWidget {
-  final String pageTtile;
+  final String pageTitle;
   final bool isBackButton;
   const CustomGradientAppBarWid({
     super.key,
-    required this.pageTtile,
+    required this.pageTitle,
     this.isBackButton = true,
   });
 
@@ -38,10 +38,10 @@ class CustomGradientAppBarWid extends StatelessWidget
                 ? [
                     const CustomBackBtnWid(),
                     Text(
-                      pageTtile,
+                      pageTitle,
                       style: const TextStyle(
                         color: whiteColor,
-                        fontSize: meduimFontSize,
+                        fontSize: mediumFontSize,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -60,10 +60,10 @@ class CustomGradientAppBarWid extends StatelessWidget
                   ]
                 : [
                     Text(
-                      pageTtile,
+                      pageTitle,
                       style: const TextStyle(
                         color: whiteColor,
-                        fontSize: meduimFontSize,
+                        fontSize: mediumFontSize,
                         fontWeight: FontWeight.w500,
                       ),
                     ),

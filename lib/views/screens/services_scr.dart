@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/constants/app_constants.dart';
 import '../widgets/app_logo_wid.dart';
 import '../widgets/custom_appbar_shape_wid.dart';
-import '../widgets/custom_icons_widget.dart';
+import '../widgets/custom_icons_wid.dart';
 import '../widgets/service_card_wid.dart';
 import 'choice_card_scr.dart';
 
@@ -26,10 +26,10 @@ class ServicesScr extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ChoiceCardScreen(),
+                        builder: (context) => ChoiceCardScr(),
                       ));
                 },
-                child: const CustomIcons(
+                child: const CustomIconWid(
                   height: 30,
                   icon: CustomAppIcons.bell,
                 )),

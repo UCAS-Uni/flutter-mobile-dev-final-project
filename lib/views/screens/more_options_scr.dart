@@ -40,7 +40,7 @@ class MoreOptionsScr extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomGradientAppBarWid(
-        pageTtile: "More",
+        pageTitle: "More",
         isBackButton: false,
       ),
       body: ListView.separated(

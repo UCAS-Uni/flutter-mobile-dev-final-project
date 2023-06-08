@@ -34,7 +34,7 @@ class _OrdersScrState extends State<OrdersScr> with TickerProviderStateMixin {
           "Item Details",
           style: TextStyle(
             color: whiteColor,
-            fontSize: meduimFontSize,
+            fontSize: mediumFontSize,
             fontWeight: FontWeight.w600,
           ),
         ),

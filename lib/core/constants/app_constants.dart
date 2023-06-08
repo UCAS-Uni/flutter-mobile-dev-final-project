@@ -34,71 +34,69 @@ Gradient secondaryGradient = const LinearGradient(
 
 const double extraLargeFontSize = 30;
 const double largeFontSize = 24;
-const double meduimFontSize = 20;
+const double mediumFontSize = 20;
 const double normalFontSize = 15;
 const double smallFontSize = 12;
 
 List<ServiceWid> services = <ServiceWid>[
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.ac),
-    onTap: () {
-      // print("hello world");
-    },
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.lights),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.ac),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.water),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.lights),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.bugs),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.water),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.cleans),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.bugs),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.saw),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.cleans),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.settingsLarge),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.saw),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.cleans),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.settingsLarge),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.saw),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.cleans),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.ac),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.saw),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.lights),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.ac),
     onTap: () {},
   ),
   ServiceWid(
     title: 'Carpenter',
-    icon: const CustomIcons(height: 50, icon: CustomAppIcons.water),
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.lights),
+    onTap: () {},
+  ),
+  ServiceWid(
+    title: 'Carpenter',
+    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.water),
     onTap: () {},
   ),
 ];
