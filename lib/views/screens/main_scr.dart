@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_mobile_dev_final_project/controllers/state_manager/auth_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../../core/navigations/app_navigator.dart';
 import '../../core/themes/app_theme.dart';
@@ -14,12 +16,20 @@ class MainScr extends StatelessWidget {
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
     );
 
-    return MaterialApp(
-      navigatorKey: AppRouter.navigatorKey,
-      debugShowCheckedModeBanner: false,
-      title: 'Home Services Provider',
-      theme: appTheme,
-      home: const SplashScr(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<AuthProvider>(create: (_) => AuthProvider())
+      ],
+      child:
+          Consumer<AuthProvider>(builder: (BuildContext context, value, child) {
+        return MaterialApp(
+          navigatorKey: AppRouter.navigatorKey,
+          debugShowCheckedModeBanner: false,
+          title: 'Home Services Provider',
+          theme: appTheme,
+          home: const SplashScr(),
+        );
+      }),
     );
   }
 }

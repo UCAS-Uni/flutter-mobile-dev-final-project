@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
+import '../../core/navigations/app_navigator.dart';
 import '../widgets/huge_gradient_button_wid.dart';
 import 'home_scr.dart';
 
@@ -26,11 +27,7 @@ class CardInfoFieldScr extends StatelessWidget {
                         vertical: 20, horizontal: 30),
                     child: InkWell(
                         onTap: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const HomeScr(),
-                              ));
+                          AppRouter.navigateWithReplacementToWidget(HomeScr());
                         },
                         child: const Icon(Icons.close)),
                   ),
@@ -83,11 +80,7 @@ class CardInfoFieldScr extends StatelessWidget {
                   HugeGradientBtnWid(
                       text: "GO TO HOME",
                       onTap: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HomeScr(),
-                            ));
+                        AppRouter.navigateWithReplacementToWidget(HomeScr());
                       }),
                 ],
               ),

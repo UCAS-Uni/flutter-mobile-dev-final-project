@@ -8,11 +8,11 @@ import '../widgets/gradient_button_wid.dart';
 import 'signup_scr.dart';
 
 class CustomerSinginScr extends StatefulWidget {
-  final TextEditingController mobileController;
+  final TextEditingController emailController;
   final TextEditingController passwordController;
   const CustomerSinginScr({
     super.key,
-    required this.mobileController,
+    required this.emailController,
     required this.passwordController,
   });
 
@@ -29,9 +29,12 @@ class _CustomerSinginScrState extends State<CustomerSinginScr> {
       height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
-          const SizedBox(height: 50),
-          CustomPhoneFieldWid(controller: widget.mobileController),
           const SizedBox(height: 30),
+          CustomTextFieldWid(
+            textHint: 'Email',
+            controller: widget.emailController,
+          ),
+          const SizedBox(height: 20),
           CustomTextFieldWid(
             textHint: 'Password',
             controller: widget.passwordController,

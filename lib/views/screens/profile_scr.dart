@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
-import '../widgets/custom_icons_widget.dart';
+import '../widgets/custom_icons_wid.dart';
 import '../widgets/option_card_wid.dart';
 
 class ProfileScr extends StatelessWidget {

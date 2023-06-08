@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../widgets/app_logo_wid.dart';
-import '../widgets/custom_icons_widget.dart';
+import '../widgets/custom_icons_wid.dart';
 import '../widgets/top_indicator_wid.dart';
 
 class HomeScr extends StatefulWidget {

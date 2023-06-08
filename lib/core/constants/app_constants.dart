@@ -1,7 +1,49 @@
 import 'package:flutter/material.dart';
 
-import '../../views/widgets/custom_icons_widget.dart';
+import '../../views/widgets/custom_icons_wid.dart';
 import '../../views/widgets/service_card_wid.dart';
+
+// API Const
+const String baseUrl = 'https://studentucas.awamr.com/api/';
+const String signupEndpoint = 'auth/register/user';
+const String singinEndpoint = 'auth/login/user';
+const String allWorkEndpoint = 'all/work';
+const String createOrderEndpoint = 'create/order';
+// // todo here for Header Requests ::
+//   static Map<String, String> header(int typeToken) {
+//     Map<String, String> headers = {};
+//     if (typeToken == 0) {
+//       headers = {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json',
+//         'Accept-Language': Get.locale.toString().split("_")[0],
+//       };
+//     } else if (typeToken == 1) {
+//       headers = {
+//         'Content-Type': 'application/x-www-form-urlencoded',
+//       };
+//     } else if (typeToken == 2) {
+//       headers = {
+//         'authorization': SharedPref.instance.getUserToken(),
+//       };
+//     } else if (typeToken == 3) {
+//       headers = {
+//         //  'Authorization': '${SharedPref.instance.getToken().toString()}',
+//         'Content-Type': 'application/x-www-form-urlencoded'
+//       };
+//     } else if (typeToken == 4) {
+//       // print("msg_get_user_token ${SharedPref.instance.getUserToken()}");
+//       headers = {
+//         'Authorization': "Bearer ${SharedPref.instance.getUserToken()}",
+//         'Content-Type': 'application/json',
+//         'Accept-Language': Get.locale.toString().split("_")[0],
+//         'Accept': 'application/json',
+//       };
+//     }
+
+//     return headers;
+//   }
+// }
 
 // COLORS
 const primaryColor = Color(0xff346EDF);
