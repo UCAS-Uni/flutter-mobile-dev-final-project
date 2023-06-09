@@ -31,6 +31,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^5.2.0+1
   dotted_border: ^2.0.0+3
+  easy_localization: ^3.0.2
   flutter:
     sdk: flutter
   flutter_onboard: ^2.0.0
@@ -58,6 +59,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
+    - assets/langs/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

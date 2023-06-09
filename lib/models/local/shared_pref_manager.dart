@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../entities/user_models.dart';
+import '../entities/user_model.dart';
 
 class SharedPref {
   static SharedPref instance = SharedPref._();

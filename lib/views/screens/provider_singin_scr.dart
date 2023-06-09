@@ -4,10 +4,8 @@ import 'package:flutter_mobile_dev_final_project/core/navigations/app_navigator.
 import 'package:provider/provider.dart';
 
 import '../../core/constants/app_constants.dart';
-import '../widgets/custom_phone_field_wid.dart';
 import '../widgets/custom_textfield_wid.dart';
 import '../widgets/gradient_button_wid.dart';
-import 'home_scr.dart';
 import 'signup_scr.dart';
 
 class ProviderSigninScr extends StatefulWidget {

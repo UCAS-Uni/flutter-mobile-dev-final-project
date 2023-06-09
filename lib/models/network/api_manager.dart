@@ -52,12 +52,11 @@ class AuthHelper {
     }
   }
 
-  Future<AppResponse> getAllWork(Map<String, dynamic> body) async {
+  Future<AppResponse> getAllWorks() async {
     var appResponse = await AuthApi.getInstance
-        .registerRequest(body: body, url: allWorkEndpoint, header: {
+        .getAllWorksRequest(url: allWorkEndpoint, header: {
       'Accept': 'application/json',
       // 'Content-Type': 'multipart/form-data',
-      'Accept-Language': 'gzip, deflate, br',
     });
     if (appResponse.code?.success == true) {
       // SharedPref.instance

@@ -3,7 +3,7 @@ import 'package:flutter_mobile_dev_final_project/models/entities/app_response.da
 import 'package:flutter_mobile_dev_final_project/views/screens/home_scr.dart';
 
 import '../../core/navigations/app_navigator.dart';
-import '../../models/entities/user_models.dart';
+import '../../models/entities/user_model.dart';
 import '../../models/network/api_manager.dart';
 
 class AuthProvider extends ChangeNotifier {
@@ -66,11 +66,6 @@ class AuthProvider extends ChangeNotifier {
   }
 
   signIn() async {
-    print("Provider email: ${singinProviderEmailController.text}");
-    print("Provider password: ${singinProviderPasswordController.text}");
-    print("Customer email: ${singinCustomerEmailController.text}");
-    print("Customer password: ${singinCustomerPasswordController.text}");
-
     AppResponse credential = await AuthHelper.getInstance.loginUser(
       {
         "email": singinProviderEmailController.text == ""
@@ -81,6 +76,24 @@ class AuthProvider extends ChangeNotifier {
             : singinProviderPasswordController.text,
       },
     );
+
+    if (credential.data != null) {
+      AppRouter.navigateWithReplacementToWidget(HomeScr());
+      // notifyListeners();
+    } else {
+      showDialog(
+        context: AppRouter.navigatorKey.currentContext!,
+        builder: (context) {
+          return Container(
+            child: Text("Invalid Login Info"),
+          );
+        },
+      );
+    }
+  }
+
+  getAllWorks() async {
+    AppResponse credential = await AuthHelper.getInstance.getAllWorks();
 
     if (credential.data != null) {
       AppRouter.navigateWithReplacementToWidget(HomeScr());
