@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboard/flutter_onboard.dart';
 
@@ -58,8 +59,8 @@ class OnboardingScr extends StatelessWidget {
 }
 
 final List<OnBoardModel> onBoardData = [
-  const OnBoardModel(
-    title: "Fast reservation with technicians and craftsmen",
+  OnBoardModel(
+    title: "onboarding".tr(),
     description: "",
     imgUrl: "assets/images/onboarding-1.png",
   ),
