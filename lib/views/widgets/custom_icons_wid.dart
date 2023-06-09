@@ -1,28 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-enum CustomAppIcons {
-  ac,
-  account,
-  bell,
-  bugs,
-  cleans,
-  lights,
-  more,
-  orders,
-  saw,
-  settings,
-  settingsLarge,
-  water
-}
-
 class CustomIconWid extends StatelessWidget {
-  // final double width;
   final double height;
-  final CustomAppIcons icon;
+  final String icon;
   const CustomIconWid({
     super.key,
-    // required this.width,
     required this.height,
     required this.icon,
   });
@@ -33,7 +16,7 @@ class CustomIconWid extends StatelessWidget {
       // height: MediaQuery.of(context).size.height / 5,
       height: height,
       child: SvgPicture.asset(
-        'assets/icons/${icon.toString().split('.')[1]}.svg',
+        'assets/icons/$icon.svg',
         height: height,
       ),
     );

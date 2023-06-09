@@ -7,8 +7,14 @@ class WorkModel {
   DateTime? createdAt;
   DateTime? updatedAt;
 
-  WorkModel({id, name, icon, description, active, createdAt, updatedAt});
-
+  WorkModel(
+      {id,
+      this.name,
+      this.icon,
+      this.description,
+      this.active,
+      this.createdAt,
+      this.updatedAt});
   WorkModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];

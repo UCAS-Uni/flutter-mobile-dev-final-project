@@ -30,7 +30,7 @@ class ProfileScr extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
                 child: CustomIconWid(
                   height: 24,
-                  icon: CustomAppIcons.settings,
+                  icon: 'settings',
                 ),
               ),
               Stack(

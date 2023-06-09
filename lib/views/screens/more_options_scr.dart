@@ -44,8 +44,8 @@ class MoreOptionsScr extends StatelessWidget {
         isBackButton: false,
       ),
       body: ListView.separated(
-        physics: const NeverScrollableScrollPhysics(),
-        separatorBuilder: (context, index) => const SizedBox(height: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        separatorBuilder: (context, index) => const SizedBox(height: 8),
         itemCount: _contentList.length,
         itemBuilder: (context, index) => OptionCardWid(
           map: _contentList[index],

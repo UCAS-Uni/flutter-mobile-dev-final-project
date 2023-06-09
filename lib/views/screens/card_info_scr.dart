@@ -4,7 +4,7 @@ import '../../core/navigations/app_navigator.dart';
 import '../widgets/custom_gradient_appbar_wid.dart';
 import '../widgets/custom_phone_field_wid.dart';
 import '../widgets/custom_textfield_wid.dart';
-import '../widgets/large_button_widget.dart';
+import '../widgets/large_button_wid.dart';
 import 'card_info_field_scr.dart';
 
 class CardInfoScr extends StatelessWidget {

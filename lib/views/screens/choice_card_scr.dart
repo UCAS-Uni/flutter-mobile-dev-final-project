@@ -5,7 +5,7 @@ import '../../core/constants/app_constants.dart';
 import '../../core/navigations/app_navigator.dart';
 import '../widgets/custom_gradient_appbar_wid.dart';
 import '../widgets/custom_textfield_wid.dart';
-import '../widgets/large_button_widget.dart';
+import '../widgets/large_button_wid.dart';
 import 'card_info_scr.dart';
 
 class ChoiceCardScr extends StatelessWidget {

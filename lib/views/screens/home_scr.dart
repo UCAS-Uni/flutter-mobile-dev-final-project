@@ -45,19 +45,19 @@ class _HomeScrState extends State<HomeScr> with TickerProviderStateMixin {
             Tab(
                 icon: CustomIconWid(
                   height: 30,
-                  icon: CustomAppIcons.orders,
+                  icon: 'orders',
                 ),
                 text: 'Orders'),
             Tab(
                 icon: CustomIconWid(
                   height: 30,
-                  icon: CustomAppIcons.account,
+                  icon: 'account',
                 ),
                 text: 'Account'),
             Tab(
                 icon: CustomIconWid(
                   height: 30,
-                  icon: CustomAppIcons.more,
+                  icon: 'more',
                 ),
                 text: "More"),
           ],
@@ -67,7 +67,7 @@ class _HomeScrState extends State<HomeScr> with TickerProviderStateMixin {
         physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
         children: [
-          const WorksScr(),
+          WorksScr(),
           const OrdersScr(),
           ProfileScr(),
           MoreOptionsScr(),

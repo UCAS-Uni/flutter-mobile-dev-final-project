@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../../models/entities/work_model.dart';
 
-class ServiceCardWid extends StatelessWidget {
-  const ServiceCardWid({super.key, required this.workModel});
+class WorkCardWid extends StatelessWidget {
+  WorkCardWid({super.key, required this.workModel}) {
+    print('WorkCardWid constructor');
+    print('WorkCardWid constructor: workModel.name: ${workModel.name}');
+    print('WorkCardWid constructor: workModel.icon: ${workModel.icon}');
+  }
   final WorkModel workModel;
 
   @override
@@ -23,8 +28,23 @@ class ServiceCardWid extends StatelessWidget {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Expanded(child: Image.network(workModel.icon!)),
-                  Text(workModel.name!),
+                  // TODO: Uncomment it if you need to deal with API
+                  // Expanded(child: Image.network(workModel.icon!)),
+
+                  // TODO: Comment it if you need to deal png icons
+                  // Expanded(
+                  //     child: Image.asset("assets/icons/${workModel.icon}.png")),
+                  Expanded(
+                    child: SvgPicture.asset(
+                      'assets/icons/${workModel.icon}.svg',
+                    ),
+                  ),
+                  Text(
+                    workModel.name!,
+                    style: const TextStyle(
+                      fontSize: 12,
+                    ),
+                  ),
                 ]),
           )),
     );
