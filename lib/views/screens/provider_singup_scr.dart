@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
+import '../../core/navigations/app_navigator.dart';
 import '../widgets/custom_phone_field_wid.dart';
 import '../widgets/custom_textfield_wid.dart';
 import '../widgets/gradient_button_wid.dart';
@@ -95,7 +96,7 @@ class _ProviderSingupScrState extends State<ProviderSingupScr> {
                       style: TextStyle(fontSize: normalFontSize),
                     ),
                     GestureDetector(
-                      onTap: () => Navigator.of(context).pop(),
+                      onTap: () => AppRouter.navigateFrom(),
                       child: const Text(
                         "SIGN IN",
                         style: TextStyle(

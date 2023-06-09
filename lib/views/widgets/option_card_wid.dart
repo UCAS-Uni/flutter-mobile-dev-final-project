@@ -13,7 +13,7 @@ class OptionCardWid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: map['onTap'],
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),

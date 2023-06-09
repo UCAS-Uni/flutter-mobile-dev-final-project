@@ -25,7 +25,7 @@ class CardInfoFieldScr extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: 20, horizontal: 30),
-                    child: InkWell(
+                    child: GestureDetector(
                         onTap: () {
                           AppRouter.navigateWithReplacementToWidget(HomeScr());
                         },

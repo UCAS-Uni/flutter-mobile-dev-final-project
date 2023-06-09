@@ -41,6 +41,7 @@ class AuthApi {
     try {
       var response = await DioManagerClass.getInstance
           .dioGetMethod(url: url, header: header);
+      print(response.toString());
       return AppResponse.fromJson(json.decode(response.toString()));
     } on DioException catch (ex) {
       var message = json.decode(ex.response.toString());

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobile_dev_final_project/models/entities/app_response.dart';
+import 'package:flutter_mobile_dev_final_project/models/entities/work_model.dart';
 import 'package:flutter_mobile_dev_final_project/views/screens/home_scr.dart';
 
 import '../../core/navigations/app_navigator.dart';
@@ -33,6 +34,7 @@ class AuthProvider extends ChangeNotifier {
   final TextEditingController singupCustomerPasswordController =
       TextEditingController();
   bool isSignedIn = false;
+  List<WorkModel> allWorks = [];
 
   registerNewUser() async {
     var credential = await AuthHelper.getInstance.registerUser(
@@ -78,8 +80,9 @@ class AuthProvider extends ChangeNotifier {
     );
 
     if (credential.data != null) {
+      await getAllWorks();
       AppRouter.navigateWithReplacementToWidget(HomeScr());
-      // notifyListeners();
+      notifyListeners();
     } else {
       showDialog(
         context: AppRouter.navigatorKey.currentContext!,
@@ -93,17 +96,20 @@ class AuthProvider extends ChangeNotifier {
   }
 
   getAllWorks() async {
-    AppResponse credential = await AuthHelper.getInstance.getAllWorks();
+    AppResponse allWorksResponse = await AuthHelper.getInstance.getAllWorks();
 
-    if (credential.data != null) {
-      AppRouter.navigateWithReplacementToWidget(HomeScr());
+    if (allWorksResponse.data != null) {
+      for (var item in allWorksResponse.data) {
+        allWorks.add(WorkModel.fromJson(item));
+      }
+      print("Works Number  ${allWorks.length}");
       // notifyListeners();
     } else {
       showDialog(
         context: AppRouter.navigatorKey.currentContext!,
         builder: (context) {
           return Container(
-            child: Text("Invalid Login Info"),
+            child: Text("Invalid Request"),
           );
         },
       );

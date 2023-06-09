@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../views/widgets/custom_icons_wid.dart';
-import '../../views/widgets/service_card_wid.dart';
+import '../../views/widgets/work_card_wid.dart';
 
 // API Const
 const String baseUrl = 'https://studentucas.awamr.com/api/';
 const String signupEndpoint = 'auth/register/user';
 const String singinEndpoint = 'auth/login/user';
-const String allWorkEndpoint = 'all/work';
+const String allWorkEndpoint = 'all/works';
 const String createOrderEndpoint = 'create/order';
 // // todo here for Header Requests ::
 //   static Map<String, String> header(int typeToken) {
@@ -80,65 +80,65 @@ const double mediumFontSize = 20;
 const double normalFontSize = 15;
 const double smallFontSize = 12;
 
-List<ServiceWid> services = <ServiceWid>[
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.ac),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.lights),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.water),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.bugs),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.cleans),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.saw),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.settingsLarge),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.cleans),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.saw),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.ac),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.lights),
-    onTap: () {},
-  ),
-  ServiceWid(
-    title: 'Carpenter',
-    icon: const CustomIconWid(height: 50, icon: CustomAppIcons.water),
-    onTap: () {},
-  ),
-];
+// List<WorkWid> services = <WorkWid>[
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.ac),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.lights),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.water),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.bugs),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.cleans),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.saw),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.settingsLarge),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.cleans),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.saw),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.ac),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.lights),
+//     onTap: () {},
+//   ),
+//   WorkWid(
+//     title: 'Carpenter',
+//     icon: const CustomIconWid(height: 50, icon: CustomAppIcons.water),
+//     onTap: () {},
+//   ),
+// ];

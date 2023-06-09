@@ -2,6 +2,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
+import '../../core/navigations/app_navigator.dart';
 import '../widgets/custom_gradient_appbar_wid.dart';
 import '../widgets/custom_textfield_wid.dart';
 import '../widgets/large_button_widget.dart';
@@ -26,7 +27,7 @@ class ChoiceCardScr extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                InkWell(
+                GestureDetector(
                   onTap: () {},
                   child: DottedBorder(
                     color: primaryColor,
@@ -74,11 +75,7 @@ class ChoiceCardScr extends StatelessWidget {
             LargeButtonWid(
                 text: "NEXT",
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => CardInfoScr(),
-                    ),
-                  );
+                  AppRouter.navigateToWidget(CardInfoScr());
                 }),
             const SizedBox(height: 30)
           ],

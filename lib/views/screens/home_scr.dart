@@ -7,7 +7,7 @@ import '../widgets/top_indicator_wid.dart';
 import 'more_options_scr.dart';
 import 'orders_scr.dart';
 import 'profile_scr.dart';
-import 'services_scr.dart';
+import 'works_scr.dart';
 
 class HomeScr extends StatefulWidget {
   const HomeScr({super.key});
@@ -67,7 +67,7 @@ class _HomeScrState extends State<HomeScr> with TickerProviderStateMixin {
         physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
         children: [
-          const ServicesScr(),
+          const WorksScr(),
           const OrdersScr(),
           ProfileScr(),
           MoreOptionsScr(),

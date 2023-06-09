@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobile_dev_final_project/controllers/state_manager/auth_provider.dart';
-import 'package:flutter_mobile_dev_final_project/core/navigations/app_navigator.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/constants/app_constants.dart';
+import '../../core/navigations/app_navigator.dart';
 import '../widgets/custom_textfield_wid.dart';
 import '../widgets/gradient_button_wid.dart';
 import 'signup_scr.dart';

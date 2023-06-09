@@ -1,26 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_constants.dart';
-
-class ServiceWid {
-  const ServiceWid({
-    required this.title,
-    required this.icon,
-    required this.onTap,
-  });
-  final String title;
-  final Widget icon;
-  final Function() onTap;
-}
+import '../../models/entities/work_model.dart';
 
 class ServiceCardWid extends StatelessWidget {
-  const ServiceCardWid({super.key, required this.service});
-  final ServiceWid service;
+  const ServiceCardWid({super.key, required this.workModel});
+  final WorkModel workModel;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: service.onTap,
+    return GestureDetector(
+      onTap: () {
+        // TODO: Navigate to work details page
+      },
       child: Container(
           decoration: BoxDecoration(
             color: whiteColor,
@@ -31,8 +23,8 @@ class ServiceCardWid extends StatelessWidget {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Expanded(child: service.icon),
-                  Text(service.title),
+                  Expanded(child: Image.network(workModel.icon!)),
+                  Text(workModel.name!),
                 ]),
           )),
     );

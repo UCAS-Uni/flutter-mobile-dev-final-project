@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/navigations/app_navigator.dart';
 import '../widgets/custom_gradient_appbar_wid.dart';
 import '../widgets/custom_phone_field_wid.dart';
 import '../widgets/custom_textfield_wid.dart';
@@ -37,8 +38,7 @@ class CardInfoScr extends StatelessWidget {
             LargeButtonWid(
                 text: "ADD ORDER",
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const CardInfoFieldScr()));
+                  AppRouter.navigateToWidget(CardInfoFieldScr());
                 }),
             const SizedBox(height: 30)
           ],

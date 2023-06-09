@@ -55,7 +55,7 @@ class AuthHelper {
   Future<AppResponse> getAllWorks() async {
     var appResponse = await AuthApi.getInstance
         .getAllWorksRequest(url: allWorkEndpoint, header: {
-      'Accept': 'application/json',
+      'Accept': '*/*',
       // 'Content-Type': 'multipart/form-data',
     });
     if (appResponse.code?.success == true) {
