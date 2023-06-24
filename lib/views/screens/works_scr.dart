@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobile_dev_final_project/views/screens/card_info_scr.dart';
 import 'package:provider/provider.dart';
 
 import '../../controllers/state_manager/auth_provider.dart';

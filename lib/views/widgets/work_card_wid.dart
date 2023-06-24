@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../core/constants/app_constants.dart';
+import '../../core/navigations/app_navigator.dart';
 import '../../models/entities/work_model.dart';
+import '../screens/card_info_scr.dart';
 
 class WorkCardWid extends StatelessWidget {
   WorkCardWid({super.key, required this.workModel}) {
@@ -16,7 +18,7 @@ class WorkCardWid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // TODO: Navigate to work details page
+        AppRouter.navigateToWidget(CardInfoScr());
       },
       child: Container(
           decoration: BoxDecoration(

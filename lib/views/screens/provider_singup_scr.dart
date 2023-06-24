@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobile_dev_final_project/views/screens/home_scr.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../../core/navigations/app_navigator.dart';
@@ -110,7 +111,11 @@ class _ProviderSingupScrState extends State<ProviderSingupScr> {
                     ),
                   ],
                 ),
-                HugeGradientButtonWid(text: "SIGN UP", onTap: () {}),
+                HugeGradientButtonWid(
+                    text: "SIGN UP",
+                    onTap: () {
+                      AppRouter.navigateToWidget(const HomeScr());
+                    }),
               ],
             ),
           ),

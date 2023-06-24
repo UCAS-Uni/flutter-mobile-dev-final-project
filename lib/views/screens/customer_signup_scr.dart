@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobile_dev_final_project/core/navigations/app_navigator.dart';
+import 'package:flutter_mobile_dev_final_project/views/screens/signin_scr.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../widgets/custom_phone_field_wid.dart';
@@ -95,7 +97,10 @@ class _CustomerSignupScrState extends State<CustomerSignupScr> {
                       style: TextStyle(fontSize: normalFontSize),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        AppRouter.navigateWithReplacementToWidget(
+                            const SigninScr());
+                      },
                       child: const Text(
                         "SIGN IN",
                         style: TextStyle(

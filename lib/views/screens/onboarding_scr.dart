@@ -60,7 +60,7 @@ class OnboardingScr extends StatelessWidget {
 
 final List<OnBoardModel> onBoardData = [
   OnBoardModel(
-    title: "onboarding".tr(),
+    title: "fastReservationWithTechniciansAndCraftsmen".tr(),
     description: "",
     imgUrl: "assets/images/onboarding-1.png",
   ),

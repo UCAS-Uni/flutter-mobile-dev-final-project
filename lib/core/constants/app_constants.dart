@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_dev_final_project/models/entities/work_model.dart';
-
-import '../../views/widgets/custom_icons_wid.dart';
-import '../../views/widgets/work_card_wid.dart';
 
 // API Const
 const String baseUrl = 'https://studentucas.awamr.com/api/';
@@ -44,17 +40,3 @@ const double largeFontSize = 24;
 const double mediumFontSize = 20;
 const double normalFontSize = 15;
 const double smallFontSize = 12;
-/*
-  ac,
-  account,
-  bell,
-  bugs,
-  cleans,
-  lights,
-  more,
-  orders,
-  saw,
-  settings,
-  settingsLarge,
-  water*/
-

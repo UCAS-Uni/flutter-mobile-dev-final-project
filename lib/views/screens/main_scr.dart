@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobile_dev_final_project/controllers/state_manager/auth_provider.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/navigations/app_navigator.dart';
@@ -23,7 +24,7 @@ class MainScr extends StatelessWidget {
       ],
       child:
           Consumer<AuthProvider>(builder: (BuildContext context, value, child) {
-        return MaterialApp(
+        return GetMaterialApp(
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,

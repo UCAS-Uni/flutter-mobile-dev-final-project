@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobile_dev_final_project/models/entities/app_response.dart';
 import 'package:flutter_mobile_dev_final_project/models/entities/work_model.dart';
 import 'package:flutter_mobile_dev_final_project/views/screens/home_scr.dart';
+import 'package:get/get.dart';
 
 import '../../core/navigations/app_navigator.dart';
 import '../../models/entities/user_model.dart';
@@ -39,31 +40,37 @@ class AuthProvider extends ChangeNotifier {
   registerNewUser() async {
     var credential = await AuthHelper.getInstance.registerUser(
       {
-        // "email": singupCustomerEmailController.text,
-        // "password": singupCustomerPasswordController.text,
-        // "name":   signupNameController.text,
-        // "phone": singupMobileNumberController.text,
+        "email": singupCustomerEmailController.text,
+        "password": singupCustomerPasswordController.text,
+        "name": singupCustomerNameController.text,
+        "phone": singupCustomerMobileNumberController.text,
       },
     );
     var newUser = UserModel(
-        // email: singupEmailController.text,
-        // password: singupCustomerPasswordController.text,
-        // name: signupNameController.text,
-        // phone: singupMobileNumberController.text,
-        );
-    if (credential != null) {
-      // AppRouter.navigateWithReplacementToWidget(CategoriesScreen());
-      // navigate to home screen
+      email: singupCustomerEmailController.text,
+      password: singupCustomerPasswordController.text,
+      name: singupCustomerNameController.text,
+      phone: singupCustomerMobileNumberController.text,
+    );
+    if (credential.data != null) {
+      AppRouter.navigateWithReplacementToWidget(HomeScr());
     } else {
       // Show alert dialog with error message
-      showDialog(
-        context: AppRouter.navigatorKey.currentContext!,
-        builder: (context) {
-          return Container(
-            child: Text("Invalid Register Info"),
-          );
-        },
+
+      Get.snackbar(
+        "Failed",
+        "Invalid Register Info",
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
       );
+      // showDialog(
+      //   context: AppRouter.navigatorKey.currentContext!,
+      //   builder: (context) {
+      //     return Container(
+      //       child: Text("Invalid Register Info"),
+      //     );
+      //   },
+      // );
     }
   }
 
@@ -84,13 +91,13 @@ class AuthProvider extends ChangeNotifier {
       AppRouter.navigateWithReplacementToWidget(HomeScr());
       notifyListeners();
     } else {
-      showDialog(
-        context: AppRouter.navigatorKey.currentContext!,
-        builder: (context) {
-          return Container(
-            child: Text("Invalid Login Info"),
-          );
-        },
+      Get.snackbar(
+        "Failed",
+        "Invalid Login Info",
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
       );
     }
   }
