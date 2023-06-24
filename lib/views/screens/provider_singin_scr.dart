@@ -6,6 +6,7 @@ import '../../core/constants/app_constants.dart';
 import '../../core/navigations/app_navigator.dart';
 import '../widgets/custom_textfield_wid.dart';
 import '../widgets/gradient_button_wid.dart';
+import 'home_scr.dart';
 import 'signup_scr.dart';
 
 class ProviderSigninScr extends StatefulWidget {
@@ -114,15 +115,21 @@ class _ProviderSigninScrState extends State<ProviderSigninScr> {
                 ),
               ),
               const Spacer(),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Get Start Now",
-                    style: TextStyle(
-                      fontSize: normalFontSize,
-                      color: blackColor,
-                      fontWeight: FontWeight.w600,
+                  GestureDetector(
+                    onTap: () {
+                      AppRouter.navigateWithReplacementToWidget(
+                          const HomeScr());
+                    },
+                    child: Text(
+                      "Get Start Now",
+                      style: TextStyle(
+                        fontSize: normalFontSize,
+                        color: blackColor,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   SizedBox(width: 7),

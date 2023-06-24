@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobile_dev_final_project/views/screens/home_scr.dart';
 import 'package:provider/provider.dart';
 
 import '../../controllers/state_manager/auth_provider.dart';
@@ -116,15 +117,21 @@ class _CustomerSinginScrState extends State<CustomerSinginScr> {
                 ),
               ),
               const Spacer(),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Get Start Now",
-                    style: TextStyle(
-                      fontSize: normalFontSize,
-                      color: blackColor,
-                      fontWeight: FontWeight.w600,
+                  GestureDetector(
+                    onTap: () {
+                      AppRouter.navigateWithReplacementToWidget(
+                          const HomeScr());
+                    },
+                    child: Text(
+                      "Get Start Now",
+                      style: TextStyle(
+                        fontSize: normalFontSize,
+                        color: blackColor,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   SizedBox(width: 7),

@@ -15,9 +15,19 @@ class OnboardingScr extends StatelessWidget {
     return Scaffold(
       body: OnBoard(
         pageController: _pageController,
-        onSkip: () {
-          AppRouter.navigateWithReplacementToWidget(const SigninScr());
-        },
+        skipButton: TextButton(
+          onPressed: () {
+            AppRouter.navigateWithReplacementToWidget(const SigninScr());
+          },
+          child: Text(
+            "skip".tr(),
+            style: const TextStyle(
+              color: primaryColor,
+              fontSize: smallFontSize,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
         onDone: () {
           AppRouter.navigateWithReplacementToWidget(const SigninScr());
         },
@@ -36,7 +46,7 @@ class OnboardingScr extends StatelessWidget {
           builder: (context, ref, child) {
             final state = ref.watch(onBoardStateProvider);
             return HugeGradientBtnWid(
-              text: state.isLastPage ? "DONE" : "NEXT",
+              text: state.isLastPage ? "done".tr() : "next".tr(),
               onTap: () => _onNextTap(state, context),
             );
           },
@@ -64,13 +74,13 @@ final List<OnBoardModel> onBoardData = [
     description: "",
     imgUrl: "assets/images/onboarding-1.png",
   ),
-  const OnBoardModel(
-    title: "Fast reservation with technicians and craftsmen",
+  OnBoardModel(
+    title: "fastReservationWithTechniciansAndCraftsmen".tr(),
     description: "",
     imgUrl: "assets/images/onboarding-2.png",
   ),
-  const OnBoardModel(
-    title: "Fast reservation with technicians and craftsmen",
+  OnBoardModel(
+    title: "fastReservationWithTechniciansAndCraftsmen".tr(),
     description: "",
     imgUrl: "assets/images/onboarding-1.png",
   ),

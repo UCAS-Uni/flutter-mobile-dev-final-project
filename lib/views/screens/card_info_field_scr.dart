@@ -38,34 +38,33 @@ class CardInfoFieldScr extends StatelessWidget {
             ),
             Expanded(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "ORDER ",
+                  const Text.rich(
+                    TextSpan(
+                        text: "ORDER ",
                         style: TextStyle(
                             fontSize: largeFontSize,
                             fontWeight: FontWeight.w800,
                             color: blackColor),
-                      ),
-                      Text(
-                        "Done",
-                        style: TextStyle(
-                            fontSize: largeFontSize,
-                            fontWeight: FontWeight.w800,
-                            color: primaryColor),
-                      ),
-                      Text(
-                        "!",
-                        style: TextStyle(
-                            fontSize: largeFontSize,
-                            fontWeight: FontWeight.w800,
-                            color: orangeColor),
-                      ),
-                    ],
+                        children: [
+                          TextSpan(
+                            text: "DONE",
+                            style: TextStyle(
+                                fontSize: largeFontSize,
+                                fontWeight: FontWeight.w800,
+                                color: primaryColor),
+                          ),
+                          TextSpan(
+                            text: "!",
+                            style: TextStyle(
+                                fontSize: largeFontSize,
+                                fontWeight: FontWeight.w800,
+                                color: orangeColor),
+                          ),
+                        ]),
                   ),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 15, width: double.infinity),
                   SizedBox(
                     width: MediaQuery.of(context).size.width - 50,
                     child: const Text(

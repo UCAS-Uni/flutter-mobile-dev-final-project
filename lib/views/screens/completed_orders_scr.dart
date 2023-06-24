@@ -10,7 +10,7 @@ class CompletedOrdersScr extends StatelessWidget {
     return ListView.separated(
         itemBuilder: (context, index) => const SizedBox(height: 2.5),
         separatorBuilder: (context, index) => OrderCardDetailsWid(
-            title: "Order #${index + 1440}",
+            title: "Order #${index + 52000}",
             date: "28 Nov 2019",
             serviceType: "Carpenter"),
         itemCount: 5);
